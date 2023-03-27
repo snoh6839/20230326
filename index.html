@@ -29,7 +29,7 @@
             padding: 1rem 2rem;
             border-radius: 1rem;
             color: #fff;
-            font-size: 1.5rem;
+            font-size: 26px;
             margin: 2rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -51,7 +51,7 @@
             display: none;
             margin: 30px 10px;
         }
-        #explanation-1 {
+        #codeblock {
             color: #f5f5f5;
             background-color: #333;
             display: block;
@@ -60,16 +60,16 @@
             padding: 10px;
             width: 300px;
             height: 150px;
+            box-sizing: border-box;
         }
     </style>
 </head>
 
 <body>
-    <div id="output"></div>
-
-    <button onclick="showExplanation()">설명 보기</button>
-    <div id="explanation">
-        <p id="explanation-1">
+    <div>
+        <div id="output">
+        </div>
+        <p id="codeblock">
             <?php <br>
             for ($i = 1; $i <= 5; $i++) { <br>
             for ($j = 1; $j <= $i; $j++) { <br>
@@ -79,22 +79,27 @@
             } <br>
             ?> <br>
         </p>
-        <p id="explanation-2">
+    </div>
+
+    <button onclick="showExplanation()">설명 보기</button>
+    <div id="explanation">
+        
+        <p id="explanation-1">
             이 코드는 다음과 같이 동작합니다.
         </p>
-        <p id="explanation-3">
+        <p id="explanation-2">
             1. 바깥쪽 for 루프에서는 $i 변수를 1부터 5까지 1씩 증가시키며, 5번 반복합니다. 즉, 각 줄마다 해당하는 $i 변수의 값이 달라지게 됩니다.
         </p>
-        <p id="explanation-4">
+        <p id="explanation-3">
             2. $i 변수는 현재 찍을 별의 줄을 나타내며, 첫 번째 루프에서 $i가 1일 때는 첫 번째 줄에 별을 찍게 됩니다.
         </p>
-        <p id="explanation-5">
+        <p id="explanation-4">
             3. 안쪽 for 루프에서는 $j 변수를 1부터 $i까지 1씩 증가시키며, $i번 반복합니다. 즉, 해당하는 줄에서 찍을 별의 개수만큼 반복하게 됩니다.
         </p>
-        <p id="explanation-6">
+        <p id="explanation-5">
             4. $j 변수는 현재 줄에서 찍을 별의 개수를 나타내며, 예를 들어 $i가 3일 때는 3번 반복하며 한 줄에 ***을 찍습니다.
         </p>
-        <p id="explanation-7">
+        <p id="explanation-6">
             5. 안쪽 for 루프에서 별 찍기가 끝나면, 바깥쪽 for 루프에서 줄바꿈을 수행합니다. 즉, 각 줄이 끝난 후에 줄바꿈을 하게 됩니다.
         </p>
 
